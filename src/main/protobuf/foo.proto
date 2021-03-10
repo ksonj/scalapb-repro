@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package com.example;
+
+message Baz {
+    string name = 1;
+}
+
+message Fizz {
+    int32 buzz = 1;
+}
+
+message Foo {
+    oneof sealed_value {
+        Baz baz = 1;
+        Fizz fizz = 2;
+    }
+}
